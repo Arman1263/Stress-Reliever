@@ -1,0 +1,8 @@
+streamlit
+pandas
+google.generativeai
+numpy
+plotly
+# streamlit_extras.switch_page_button
+google-generativeai
+
