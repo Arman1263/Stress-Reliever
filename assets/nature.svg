@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <style>
+    .leaf {
+      animation: sway 8s ease-in-out infinite alternate;
+      transform-origin: bottom center;
+    }
+    
+    @keyframes sway {
+      0% { transform: rotate(0deg); }
+      50% { transform: rotate(5deg); }
+      100% { transform: rotate(-5deg); }
+    }
+    
+    .leaf:nth-child(2n) {
+      animation-delay: 0.5s;
+    }
+    
+    .leaf:nth-child(3n) {
+      animation-delay: 1s;
+    }
+    
+    .cloud {
+      animation: float 15s linear infinite;
+    }
+    
+    @keyframes float {
+      0% { transform: translateX(-50px); }
+      100% { transform: translateX(850px); }
+    }
+    
+    .cloud:nth-child(2) {
+      animation-duration: 25s;
+      animation-delay: 5s;
+    }
+    
+    .bird {
+      animation: fly 20s linear infinite;
+    }
+    
+    @keyframes fly {
+      0% { transform: translateX(-50px) translateY(0); }
+      25% { transform: translateX(200px) translateY(-30px); }
+      50% { transform: translateX(400px) translateY(0); }
+      75% { transform: translateX(600px) translateY(-20px); }
+      100% { transform: translateX(850px) translateY(0); }
+    }
+  </style>
+  
+  <!-- Sky background -->
+  <rect width="800" height="500" fill="#1A1A1A"/>
+  
+  <!-- Stars -->
+  <g fill="#FFFFFF" opacity="0.6">
+    <circle cx="100" cy="50" r="1" />
+    <circle cx="200" cy="80" r="1.2" />
+    <circle cx="300" cy="40" r="1" />
+    <circle cx="400" cy="60" r="1.5" />
+    <circle cx="500" cy="30" r="1" />
+    <circle cx="600" cy="70" r="1.2" />
+    <circle cx="700" cy="50" r="1" />
+    <circle cx="150" cy="100" r="1" />
+    <circle cx="250" cy="70" r="1.2" />
+    <circle cx="350" cy="90" r="1" />
+    <circle cx="450" cy="50" r="1.5" />
+    <circle cx="550" cy="80" r="1" />
+    <circle cx="650" cy="60" r="1.2" />
+    <circle cx="750" cy="90" r="1" />
+  </g>
+  
+  <!-- Moon -->
+  <circle cx="700" cy="80" r="40" fill="#E0E0E0" opacity="0.8" />
+  <circle cx="680" cy="70" r="10" fill="#1A1A1A" opacity="0.2" />
+  <circle cx="710" cy="90" r="8" fill="#1A1A1A" opacity="0.2" />
+  
+  <!-- Clouds -->
+  <g class="cloud" fill="#2A2A2A" opacity="0.6">
+    <ellipse cx="200" cy="120" rx="50" ry="20" />
+    <ellipse cx="240" cy="110" rx="40" ry="15" />
+    <ellipse cx="170" cy="115" rx="30" ry="12" />
+  </g>
+  
+  <g class="cloud" fill="#2A2A2A" opacity="0.4" style="animation-delay: 7s;">
+    <ellipse cx="500" cy="150" rx="60" ry="25" />
+    <ellipse cx="550" cy="140" rx="45" ry="20" />
+    <ellipse cx="460" cy="145" rx="35" ry="15" />
+  </g>
+  
+  <!-- Mountains -->
+  <polygon points="0,500 0,300 100,200 200,350 300,250 400,300 500,200 600,350 700,250 800,300 800,500" fill="#2A2A2A" />
+  
+  <!-- Hills -->
+  <path d="M0,500 Q200,380 400,450 Q600,380 800,450 L800,500 Z" fill="#333333" />
+  
+  <!-- Ground -->
+  <rect x="0" y="450" width="800" height="50" fill="#333333" />
+  
+  <!-- Birds -->
+  <g class="bird" stroke="#98FB98" stroke-width="2" opacity="0.7">
+    <path d="M0,0 C5,-5 10,-5 15,0 C20,-5 25,-5 30,0" transform="translate(100, 100)" />
+  </g>
+  
+  <g class="bird" stroke="#98FB98" stroke-width="2" opacity="0.7" style="animation-delay: 5s;">
+    <path d="M0,0 C5,-5 10,-5 15,0 C20,-5 25,-5 30,0" transform="translate(150, 120)" />
+  </g>
+  
+  <!-- Trees -->
+  <g transform="translate(100, 400)">
+    <rect x="-5" y="0" width="10" height="50" fill="#5D4037" />
+    <g class="leaf">
+      <path d="M0,0 L-30,-30 A30,30 0 0,1 30,-30 Z" fill="#7B68EE" opacity="0.7" />
+      <path d="M0,-25 L-25,-50 A25,25 0 0,1 25,-50 Z" fill="#7B68EE" opacity="0.8" />
+      <path d="M0,-45 L-15,-65 A15,15 0 0,1 15,-65 Z" fill="#7B68EE" opacity="0.9" />
+    </g>
+  </g>
+  
+  <g transform="translate(200, 420)">
+    <rect x="-6" y="0" width="12" height="30" fill="#5D4037" />
+    <g class="leaf" style="animation-delay: 0.5s;">
+      <path d="M0,0 L-35,-25 A35,35 0 0,1 35,-25 Z" fill="#98FB98" opacity="0.5" />
+      <path d="M0,-20 L-30,-40 A30,30 0 0,1 30,-40 Z" fill="#98FB98" opacity="0.6" />
+      <path d="M0,-35 L-20,-55 A20,20 0 0,1 20,-55 Z" fill="#98FB98" opacity="0.7" />
+    </g>
+  </g>
+  
+  <g transform="translate(650, 410)">
+    <rect x="-5" y="0" width="10" height="40" fill="#5D4037" />
+    <g class="leaf" style="animation-delay: 1s;">
+      <path d="M0,0 L-30,-25 A30,30 0 0,1 30,-25 Z" fill="#7B68EE" opacity="0.7" />
+      <path d="M0,-20 L-25,-40 A25,25 0 0,1 25,-40 Z" fill="#7B68EE" opacity="0.8" />
+      <path d="M0,-35 L-15,-55 A15,15 0 0,1 15,-55 Z" fill="#7B68EE" opacity="0.9" />
+    </g>
+  </g>
+  
+  <g transform="translate(500, 430)">
+    <rect x="-4" y="0" width="8" height="20" fill="#5D4037" />
+    <g class="leaf" style="animation-delay: 0.7s;">
+      <path d="M0,0 L-20,-20 A20,20 0 0,1 20,-20 Z" fill="#98FB98" opacity="0.5" />
+      <path d="M0,-15 L-15,-30 A15,15 0 0,1 15,-30 Z" fill="#98FB98" opacity="0.6" />
+      <path d="M0,-25 L-10,-40 A10,10 0 0,1 10,-40 Z" fill="#98FB98" opacity="0.7" />
+    </g>
+  </g>
+  
+  <!-- Water reflection -->
+  <path d="M0,460 Q100,465 200,460 Q300,455 400,460 Q500,465 600,460 Q700,455 800,460 L800,500 L0,500 Z" fill="#7B68EE" opacity="0.2" />
+</svg>

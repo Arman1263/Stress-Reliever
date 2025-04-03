@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <style>
+    .pulse {
+      animation: pulse 4s ease-in-out infinite;
+      transform-origin: center;
+    }
+    
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 0.7; }
+      50% { transform: scale(1.1); opacity: 1; }
+      100% { transform: scale(1); opacity: 0.7; }
+    }
+  </style>
+  
+  <rect width="400" height="400" fill="#1A1A1A"/>
+  
+  <!-- Person meditating -->
+  <circle cx="200" cy="150" r="40" fill="#7B68EE" />
+  <path d="M200,190 L200,250 Q160,280 120,250 L120,230 Q160,260 200,230 Q240,260 280,230 L280,250 Q240,280 200,250 Z" fill="#7B68EE" />
+  
+  <!-- Energy circles -->
+  <circle class="pulse" cx="200" cy="200" r="80" fill="none" stroke="#98FB98" stroke-width="2" opacity="0.7" />
+  <circle class="pulse" cx="200" cy="200" r="120" fill="none" stroke="#98FB98" stroke-width="2" opacity="0.5" style="animation-delay: 1s;" />
+  <circle class="pulse" cx="200" cy="200" r="160" fill="none" stroke="#98FB98" stroke-width="2" opacity="0.3" style="animation-delay: 2s;" />
+</svg>

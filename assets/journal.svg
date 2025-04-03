@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <style>
+    .pen {
+      animation: write 3s ease-in-out infinite;
+      transform-origin: 350px 200px;
+    }
+    
+    @keyframes write {
+      0% { transform: rotate(0deg) translate(0, 0); }
+      25% { transform: rotate(-2deg) translate(-10px, 10px); }
+      75% { transform: rotate(2deg) translate(10px, -10px); }
+      100% { transform: rotate(0deg) translate(0, 0); }
+    }
+  </style>
+  
+  <rect width="400" height="400" fill="#1A1A1A"/>
+  
+  <!-- Journal book -->
+  <rect x="50" y="100" width="240" height="200" rx="5" ry="5" fill="#2A2A2A" stroke="#7B68EE" stroke-width="2" />
+  <rect x="50" y="100" width="30" height="200" rx="5" ry="5" fill="#7B68EE" />
+  <line x1="100" y1="140" x2="250" y2="140" stroke="#E0E0E0" stroke-width="1" />
+  <line x1="100" y1="170" x2="270" y2="170" stroke="#E0E0E0" stroke-width="1" />
+  <line x1="100" y1="200" x2="220" y2="200" stroke="#E0E0E0" stroke-width="1" />
+  <line x1="100" y1="230" x2="260" y2="230" stroke="#E0E0E0" stroke-width="1" />
+  <line x1="100" y1="260" x2="240" y2="260" stroke="#E0E0E0" stroke-width="1" />
+  
+  <!-- Pen -->
+  <g class="pen">
+    <line x1="260" y1="180" x2="350" y2="200" stroke="#FF8C00" stroke-width="5" />
+    <polygon points="260,175 260,185 240,180" fill="#FF8C00" />
+  </g>
+</svg>
